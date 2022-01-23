@@ -1,5 +1,5 @@
 # Typeed
-Typeed is a minimalistic react app to test your typing speed! It's under development and hence, a lot of
+Typeed is a minimalistic react app to test your typing speed! It's under development and hence, a lot of changes will be actively made - including designs, functionality and the multiplayer aspect.
 
 **Currently it contains over 670 different quotes to test your typing speed against**
 
