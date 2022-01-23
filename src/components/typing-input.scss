@@ -1,0 +1,15 @@
+.input {
+  text-decoration: none;
+  outline: none;
+  width: 60vw;
+  height: 60px;
+  padding-left: 20px;
+  border: none;
+  box-shadow: 0px 0px 20px 6px rgba(111, 111, 111, .2);
+  font-size: 20px;
+  font-weight:500;
+  
+  &:active {
+    outline: none;
+  }
+}
