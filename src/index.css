@@ -12,4 +12,8 @@ code {
     monospace;
 }
 
+.disabled {
+  pointer-events: none;
+  
+}
 

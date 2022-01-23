@@ -1,34 +1,108 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: rgba(111, 111, 111, .01);
+  background-color: rgba(111, 111, 111, 0.01);
   height: 100vh;
   width: 100vw;
 
   &__heading {
     font-size: 32px;
     font-weight: bolder;
+    position: relative;
+    &::after {
+      content: '';
+      height: 4px;
+      border-radius: 3px;
+      position: absolute;
+      bottom: -2px;
+      left: 50px; 
+      right: 0px;
+      background-color: tomato;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-top: 5px;
   }
 
   &__progress-box {
     width: 60vw;
-    height: 200px;
-    box-shadow: 0px 0px 20px 6px rgba(111, 111, 111, .2);
+    min-height: 200px;
+    box-shadow: 0px 0px 20px 6px rgba(111, 111, 111, 0.2);
     margin-top: 40px;
     padding: 20px;
-    border-radius: 5px; 
+    border-radius: 5px;
 
     & p {
       font-size: 28px;
       font-weight: bold;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
   &__typing-area {
     margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+  }
+
+  .button {
+    height: 60px;
+    background-color: rgb(6, 119, 212);
+    width: 120px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 26px;
+    font-weight: medium;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .result {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+}
+
+.word {
+  padding: 5px;
+  &.correct {
+  }
+
+  &.active {
+    background-color: rgba(11, 241, 11, 0.89);
+    border-radius: 5px;
+  }
+
+  &.wrong {
+  }
+}
+
+.letter {
+  &.correct {
+    color: green;
+  }
+
+  &.wrong {
+    color: red;
+  }
+
+  &.default {
+    color: black;
+  }
+
+  &.overwrite {
+    color: rgb(230, 3, 3);
+    font-weight: lighter;
   }
 }
