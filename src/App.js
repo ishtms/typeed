@@ -1,6 +1,8 @@
+import { useState } from "react";
+import { IoReload } from 'react-icons/io5'
+
 import TypingInput from "./components/TypingInput";
 import "./app.scss";
-import { useState } from "react";
 
 import quotes from "./utils/quotes.json";
 
@@ -83,7 +85,9 @@ function App() {
           textToType={textToType}
           setMessages={setMessages}
         />
-        <span className="button" onClick={refreshQuote}>Next</span>
+        <span className="button" onClick={refreshQuote}>
+        <IoReload size={24} />
+        </span>
       </div>
       <div className="result">
         {messages.map((curr, index) => (
